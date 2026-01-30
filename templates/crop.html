@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0"><i class="fas fa-seedling me-2"></i>Crop Recommendation</h3>
+            </div>
+            <div class="card-body p-4">
+                <form action="{{ url_for('predict_crop') }}" method="POST">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Nitrogen (N)</label>
+                            <input type="number" step="any" class="form-control" name="N" required
+                                placeholder="e.g. 90">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Phosphorus (P)</label>
+                            <input type="number" step="any" class="form-control" name="P" required
+                                placeholder="e.g. 42">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Potassium (K)</label>
+                            <input type="number" step="any" class="form-control" name="K" required
+                                placeholder="e.g. 43">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Temperature (°C)</label>
+                            <input type="number" step="any" class="form-control" name="temperature" required
+                                placeholder="e.g. 20.8">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Humidity (%)</label>
+                            <input type="number" step="any" class="form-control" name="humidity" required
+                                placeholder="e.g. 82.0">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">pH Level</label>
+                            <input type="number" step="any" class="form-control" name="ph" required
+                                placeholder="e.g. 6.5">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Rainfall (mm)</label>
+                            <input type="number" step="any" class="form-control" name="rainfall" required
+                                placeholder="e.g. 202.9">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-success btn-lg">Recommend Crop</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

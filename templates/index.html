@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="display-4 fw-bold text-success">Smart Agriculture System</h1>
+    <p class="lead text-muted">Leveraging AI to empower farmers with data-driven decisions.</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 text-center p-4">
+            <div class="card-body">
+                <i class="fas fa-seedling feature-icon"></i>
+                <h3 class="card-title">Crop Recommendation</h3>
+                <p class="card-text">Get personalized crop recommendations based on soil NPK values, climate, and
+                    rainfall data.</p>
+                <a href="{{ url_for('predict_crop') }}" class="btn btn-primary mt-3">Try Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 text-center p-4">
+            <div class="card-body">
+                <i class="fas fa-chart-line feature-icon" style="color: #ffc107;"></i>
+                <h3 class="card-title">Yield Prediction</h3>
+                <p class="card-text">Estimate potential crop harvest by analyzing area, rainfall, and environmental
+                    factors.</p>
+                <a href="{{ url_for('predict_yield') }}" class="btn btn-warning text-white mt-3">Try Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 text-center p-4">
+            <div class="card-body">
+                <i class="fas fa-bug feature-icon" style="color: #dc3545;"></i>
+                <h3 class="card-title">Disease Detection</h3>
+                <p class="card-text">Upload plant leaf images to detect diseases early using deep learning models.</p>
+                <a href="{{ url_for('detect_disease') }}" class="btn btn-danger mt-3">Try Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg border-danger">
+            <div class="card-header bg-danger text-white">
+                <h3 class="mb-0"><i class="fas fa-bug me-2"></i>Disease Detection</h3>
+            </div>
+            <div class="card-body p-4 text-center">
+                <form action="{{ url_for('detect_disease') }}" method="POST" enctype="multipart/form-data">
+                    <div class="mb-4">
+                        <label class="form-label text-muted">Upload an image of the plant leaf</label>
+                        <input class="form-control form-control-lg" type="file" name="file" accept="image/*" required>
+                    </div>
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-danger btn-lg">Analyze Image</button>
+                    </div>
+                </form>
+                <div class="mt-4 text-muted small">
+                    <p>Supported formats: JPG, PNG, JPEG</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

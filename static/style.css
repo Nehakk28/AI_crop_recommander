@@ -1,0 +1,29 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card {
+    transition: transform 0.3s;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #28a745;
+}
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
