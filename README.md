@@ -16,7 +16,7 @@ This project uses two datasets:
 2.  Image Dataset (Not Included in Repository)
 
 - Purpose: Used for crop disease classification.
-- Download the image dataset from Kaggle:   https://www.kaggle.com/datasets/jawadali1045/20k-multi-class-crop-disease-images
+- Download the image dataset:  https://www.kaggle.com/datasets/jawadali1045/20k-multi-class-crop-disease-images
 - After downloading:
     1. Extract the dataset.
     2. Place the `Train/` folder in the project root directory (same level as `app.py`).
