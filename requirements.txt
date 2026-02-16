@@ -4,3 +4,5 @@ tensorflow
 flask-sqlalchemy
 pandas
 numpy
+gunicorn
+requests
